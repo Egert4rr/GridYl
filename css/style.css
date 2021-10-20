@@ -1,0 +1,82 @@
+
+:root {
+    --main-padding: 0.4rem
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid purple;
+}
+
+.CONTAINER {
+    height: 100vh;
+    color: azure;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    "header header header"
+    "feat feat feat"
+    "sign-up sign-up sign-up"
+    "content content content";
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.CONTAINER div {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.Features {
+    display: grid;
+    grid-area: feat;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "feature1 feature2 feature3";
+  
+}
+
+
+#Feature1 {
+    background-color: darkslategray;
+    grid-area: feature1;
+    padding: var(--main-padding);
+}
+
+#Feature2 {
+    background-color: #049504;
+    grid-area: feature2;
+    padding: var(--main-padding);
+}
+
+#Feature3 {
+    background-color: #956904;
+    grid-area: feature3;
+    padding: var(--main-padding);
+}
+
+#sign-up {
+    background-color: #0464be;
+    grid-area: sign-up;
+    padding: var(--main-padding);
+}
+
+#content {
+    background-color: darkslategray;
+    grid-area: content;
+    padding: var(--main-padding);
+}
+
+#header {
+    background-color: #049504;
+    grid-area: header;
+    padding: var(--main-padding);
+}
